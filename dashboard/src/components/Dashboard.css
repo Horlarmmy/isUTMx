@@ -1,0 +1,35 @@
+/* src/components/Dashboard.css */
+.dashboard {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    color: black;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .status p {
+    margin-right: 10px;
+  }
+  
+  .status-indicator {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+  }
+  
+  .data-cards {
+    display: flex;
+    gap: 20px;
+  }
+  
