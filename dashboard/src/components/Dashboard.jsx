@@ -3,9 +3,17 @@ import DataCard from './DataCard';
 import './Dashboard.css';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import Graph from './Graph';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
+  apiKey: "AIzaSyCIjD9MYmWPJD0aVn7sp-ynxxCf7GHEXXk",
+  authDomain: "isutmx-2d383.firebaseapp.com",
+  databaseURL: "https://isutmx-2d383-default-rtdb.firebaseio.com",
+  projectId: "isutmx-2d383",
+  storageBucket: "isutmx-2d383.appspot.com",
+  messagingSenderId: "875635107374",
+  appId: "1:875635107374:web:0b7489341f6c77f92721bf"
 };
 
 // Initialize Firebase
@@ -17,11 +25,11 @@ const database = getDatabase(app);
 const Dashboard = () => {
   const [data, setData] = useState({
     testType: 'COMPRESSION',
-    force: 0,
-    extension: 23.42,
-    originalLength: 21.5,
+    force: 8,
+    extension: 1.4,
+    originalLength: 8,
     keyPressed: '',
-    status: 'Inactive',
+    status: 'inactive',
   });
 
   useEffect(() => {
@@ -59,14 +67,25 @@ const Dashboard = () => {
       <main>
         <div className="status">
           <p>Status</p>
-          <div className={`status-indicator ${data.status === 'Active' ? 'active' : ''}`}></div>
+          <div className={`status-indicator ${data.status === 'active' ? 'active' : 'inactive'}`}></div>
         </div>
-        <div className="data-cards">
-          <DataCard title="Test type" value={data.testType} />
-          <DataCard title="Force (N)" value={data.force} />
-          <DataCard title="Extension (mm)" value={data.extension} />
-          <DataCard title="Original Length (mm)" value={data.originalLength} />
-        </div>
+        {
+          data.status === "active" ? 
+          <section>
+
+          <div className="data-cards">
+            <DataCard title="Test type" value={data.testType} />
+            <DataCard title="Force (N)" value={data.force} />
+            <DataCard title="Extension (mm)" value={data.extension} />
+            <DataCard title="Original Length (mm)" value={data.originalLength} />
+          </div>
+          <div>
+            {/* <h1>Force vs Extension Graph</h1> */}
+            <Graph />
+          </div>
+          </section> : <p style={{fontStyle: "italic"}}>No test being carried out yet!</p>
+        }
+      
       </main>
     </div>
   );
