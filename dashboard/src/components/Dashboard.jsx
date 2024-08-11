@@ -25,11 +25,11 @@ const database = getDatabase(app);
 const Dashboard = () => {
   const [data, setData] = useState({
     testType: 'COMPRESSION',
-    force: 0,
-    extension: 23.42,
-    originalLength: 21.5,
+    force: 8,
+    extension: 1.4,
+    originalLength: 8,
     keyPressed: '',
-    status: 'Inactive',
+    status: 'inactive',
   });
 
   useEffect(() => {
@@ -67,10 +67,10 @@ const Dashboard = () => {
       <main>
         <div className="status">
           <p>Status</p>
-          <div className={`status-indicator ${data.status === 'Active' ? 'active' : 'inactive'}`}></div>
+          <div className={`status-indicator ${data.status === 'active' ? 'active' : 'inactive'}`}></div>
         </div>
         {
-          data.status === "Active" ? 
+          data.status === "active" ? 
           <section>
 
           <div className="data-cards">
