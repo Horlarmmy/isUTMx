@@ -29,7 +29,7 @@ const Dashboard = () => {
     extension: 1.4,
     originalLength: 8,
     keyPressed: '',
-    status: 'inactive',
+    status: 'active',
   });
 
   useEffect(() => {
