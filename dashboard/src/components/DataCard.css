@@ -1,6 +1,6 @@
 /* src/components/DataCard.css */
 .data-card {
-    padding: 20px;
+    padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
@@ -8,12 +8,12 @@
   }
   
   .data-title {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: #888;
   }
   
   .data-value {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: 'Digital-7 Mono', monospace; /* Use a digital font if available */
   }
   

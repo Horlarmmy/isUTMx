@@ -9,9 +9,9 @@ const Sidebar = () => {
       <nav>
         <ul>
           <li><a href="#real-time-data">Real Time Data</a></li>
-          <li><a href="#history">History</a></li>
-          <li><a href="#change-password">Change Password</a></li>
-          <li><a href="#logout">Logout</a></li>
+          {/* <li><a href="#history">History</a></li> */}
+          {/* <li><a href="#change-password">Change Password</a></li> */}
+          {/* <li><a href="#logout">Logout</a></li> */}
         </ul>
       </nav>
     </div>
